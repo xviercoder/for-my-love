@@ -1,0 +1,21 @@
+YANG ANDA ISI SENDIRI HANYA DI DALAM assets/media/
+
+1) FOTO
+assets/media/photos/
+photo-01.jpg sampai photo-12.jpg
+
+2) VIDEO
+assets/media/videos/
+video-01.mp4  ← FINAL VIDEO (hanya 1 file)
+
+3) MUSIK
+assets/media/music/music.mp3
+Gunakan potongan audio ±46,19 detik bila ingin durasinya sama seperti video referensi.
+
+4) LIRIK
+assets/media/lyrics/lyrics.txt
+Tinggal ganti teks [ISI LIRIK BARIS ...].
+Timestamp sudah dibuat untuk timeline 46,19 detik.
+Gaya font tersedia: script, serif, small.
+
+TIDAK PERLU EDIT index.html, styles.css, app.js, atau server.py.

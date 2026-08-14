@@ -1,0 +1,48 @@
+Saya sedang melanjutkan project website interaktif romantis untuk Carine. Gunakan file ZIP terbaru yang saya lampirkan: carine-christmas-story-scroll-READY-v6.zip sebagai SOURCE OF TRUTH. Jangan membuat ulang project dari nol dan jangan mengganti konsep yang sudah disetujui tanpa instruksi saya.
+
+KONDISI TERAKHIR PROJECT:
+- Landing page romantis bertema sakura untuk Carine.
+- User masuk ke garden, menyiram tanaman 5 kali sampai menjadi pohon sakura.
+- Setelah pohon penuh, kertas rahasia muncul.
+- Saat kertas diklik, muncul love animation lalu masuk ke cinematic scroll story.
+- Story tetap dikendalikan dengan SCROLL KE BAWAH, bukan autoplay penuh.
+- Target flow story kurang lebih 30 detik jika user scroll perlahan.
+- Background story: soft pink cinematic, pohon sakura anime-realistic yang jelas, glow lembut, vignette/grain tipis, kelopak sakura berguguran.
+- Foto muncul di dalam frame/polaroid dari kiri dan kanan bergantian. Foto bergerak pelan, mengambang, dari kecil ke membesar. Arah masuk dan arah keluar harus konsisten: foto yang masuk dari kiri keluar kembali ke kiri; yang masuk dari kanan keluar kembali ke kanan.
+- Foto tidak boleh terasa seperti teleport atau cut kasar. Gunakan easing lembut, blur/fade ringan, depth/shadow, sedikit rotasi natural, dan scale halus.
+- Frame dibuat seperti tumpukan pecahan foto/polaroid yang membentuk satu visual, tetapi tetap rapi, elegan, tidak berantakan.
+- Pada bagian paling akhir ada VIDEO sebagai ending, tetap berada dalam cinematic scroll story.
+- Lirik/teks muncul berdasarkan progress scroll dan timing sekitar 30 detik. Text animation bergantian dari kiri dan kanan dengan font aesthetic. Jangan menaruh lirik lagu berhak cipta baru secara penuh; gunakan isi file lyrics.txt yang sudah ada atau placeholder jika perlu.
+- Setelah story selesai, gallery memories tetap tersedia.
+
+STRUKTUR MEDIA YANG HARUS DIPERTAHANKAN:
+assets/media/photos/photo-01.jpg sampai photo-12.jpg
+assets/media/videos/video-01.mp4 sampai video-06.mp4
+assets/media/music/music.mp3
+assets/media/lyrics/lyrics.txt
+
+LOKASI EDIT TEKS:
+- index.html: nama Carine, landing page, judul bagian story.
+- app.js: growthMessages, growthHints, logika visual/story.
+- assets/media/lyrics/lyrics.txt: teks dan timing lyric overlay.
+- styles.css: desain/animasi saja.
+
+ATURAN KERJA:
+1. Selalu mulai dari file ZIP v6 yang saya lampirkan, bukan dari asumsi.
+2. Pertahankan struktur media agar saya cukup drag-drop foto/video/audio tanpa edit kode.
+3. Utamakan tampilan mobile/iPhone, tetapi desktop tetap rapi.
+4. Jangan menghapus flow garden, watering 5x, secret note, love animation, scroll story, atau gallery kecuali saya meminta.
+5. Setiap revisi buat versi ZIP baru dengan nomor versi berikutnya dan jelaskan perubahan utama.
+6. Sebelum memberi file, cek syntax JavaScript dan pastikan server lokal tetap bisa membuka index.html.
+7. Saat saya meminta perubahan visual, edit project yang ada. Jangan menjawab hanya dengan konsep; lakukan revisinya pada file.
+8. Pertahankan mood: romantic, soft pink, sakura, anime cinematic, elegant, dreamy, bukan childish/cartoon flat.
+
+FOKUS LANJUTAN YANG KEMUNGKINAN SAYA MINTA:
+- memperhalus pohon sakura supaya lebih anime-realistic;
+- memperhalus transisi foto pecahan/polaroid menjadi satu komposisi;
+- menyesuaikan timing setiap foto terhadap lirik/audio;
+- memasukkan foto/video/audio milik saya setelah saya upload;
+- mengatur urutan media satu per satu;
+- menyempurnakan responsive iPhone.
+
+Jika ada perbedaan antara instruksi di prompt ini dan file ZIP v6, periksa file v6 terlebih dahulu dan pertahankan behavior yang sudah bekerja, lalu lakukan perubahan seminimal mungkin sesuai instruksi terbaru saya.
