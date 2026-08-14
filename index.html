@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="id">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+  <meta name="theme-color" content="#f9d7e4" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+  <title>For Carine ♡</title>
+  <meta name="description" content="A tiny sakura garden made with love for Carine Alindya Shafara." />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="app" id="app">
+    <div class="sky-glow sky-glow-a"></div>
+    <div class="sky-glow sky-glow-b"></div>
+    <div class="floating-petals" id="floatingPetals" aria-hidden="true"></div>
+
+    <header class="topbar">
+      <div>
+        <small>A LITTLE GARDEN FOR</small>
+        <strong>Carine Alindya Shafara ♡</strong>
+      </div>
+      <button class="sound-button" id="soundButton" type="button" aria-label="Toggle ambience">♪</button>
+    </header>
+
+    <main>
+      <section class="intro" id="intro">
+        <p class="kicker">A tiny thing, made just for you.</p>
+        <h1>hai sayang <br><em>aku ada sesuatu buat kamu.</em></h1>
+        <p class="intro-copy">
+          Ada sesuatu yang kecil menunggumu di taman ini.
+          Rawat perlahan, lalu lihat apa yang tumbuh.
+        </p>
+        <button class="start-button" id="startButton" type="button">
+          Enter the garden
+          <span>↓</span>
+        </button>
+      </section>
+
+      <section class="garden" id="garden">
+        <div class="garden-header">
+          <div>
+            <small>CARINE'S LITTLE GARDEN</small>
+            <h2 id="gardenMessage">Bunganya masih tidur…</h2>
+          </div>
+          <div class="water-counter">
+            <span id="waterCount">0</span><small>/ 5</small>
+          </div>
+        </div>
+
+        <div class="garden-scene" id="gardenScene">
+          <div class="sun-haze"></div>
+
+          <div class="far-hill hill-a"></div>
+          <div class="far-hill hill-b"></div>
+
+          <div class="cloud cloud-a"><i></i><i></i><i></i></div>
+          <div class="cloud cloud-b"><i></i><i></i><i></i></div>
+
+          <div class="ground">
+            <div class="ground-highlight"></div>
+            <div class="grass-clusters" id="grassClusters"></div>
+            <div class="tiny-flowers" id="tinyFlowers"></div>
+          </div>
+
+          <div class="plant-zone" id="plantZone">
+            <div class="soil-shadow"></div>
+            <div class="soil-mound"></div>
+
+            <svg class="sakura-tree stage-0" id="sakuraTree" viewBox="0 0 420 560" role="img" aria-label="Growing sakura tree">
+              <defs>
+                <linearGradient id="trunkGrad" x1="0" x2="1">
+                  <stop offset="0" stop-color="#5e382e"/>
+                  <stop offset=".5" stop-color="#9a6350"/>
+                  <stop offset="1" stop-color="#4a2b26"/>
+                </linearGradient>
+                <linearGradient id="leafGrad" x1="0" y1="0" x2="1" y2="1">
+                  <stop offset="0" stop-color="#91c98a"/>
+                  <stop offset="1" stop-color="#4e9a66"/>
+                </linearGradient>
+                <radialGradient id="blossomGrad">
+                  <stop offset="0" stop-color="#fff7fb"/>
+                  <stop offset=".5" stop-color="#ffd5e5"/>
+                  <stop offset="1" stop-color="#f29abd"/>
+                </radialGradient>
+                <filter id="softShadow">
+                  <feDropShadow dx="0" dy="7" stdDeviation="7" flood-color="#7c4d6b" flood-opacity=".23"/>
+                </filter>
+              </defs>
+
+              <g class="seed-group">
+                <ellipse cx="210" cy="495" rx="13" ry="8" fill="#6a4639"/>
+              </g>
+
+              <g class="sprout-group">
+                <path d="M210 500 C208 465 213 438 210 402" fill="none" stroke="#5f9b68" stroke-width="8" stroke-linecap="round"/>
+                <path d="M210 448 C185 435 170 426 158 406 C185 405 206 418 213 439Z" fill="url(#leafGrad)"/>
+                <path d="M211 427 C233 407 250 398 273 397 C259 423 238 439 214 443Z" fill="url(#leafGrad)"/>
+              </g>
+
+              <g class="tree-group" filter="url(#softShadow)">
+                <path class="trunk" d="M205 495
+                  C194 430 191 373 204 317
+                  C211 287 206 254 197 223
+                  C193 207 198 193 207 181
+                  C220 214 226 241 224 273
+                  C237 251 251 231 271 211
+                  C268 236 253 260 228 292
+                  C226 319 225 350 232 380
+                  C244 354 259 334 281 317
+                  C274 343 257 370 235 396
+                  C232 432 237 466 245 495Z"
+                  fill="url(#trunkGrad)"/>
+
+                <path class="branch" d="M210 309 C178 277 155 244 141 210" fill="none" stroke="url(#trunkGrad)" stroke-width="19" stroke-linecap="round"/>
+                <path class="branch" d="M218 281 C251 245 285 216 319 200" fill="none" stroke="url(#trunkGrad)" stroke-width="17" stroke-linecap="round"/>
+                <path class="branch" d="M206 248 C188 217 177 184 176 151" fill="none" stroke="url(#trunkGrad)" stroke-width="14" stroke-linecap="round"/>
+                <path class="branch" d="M226 365 C264 342 296 326 333 324" fill="none" stroke="url(#trunkGrad)" stroke-width="14" stroke-linecap="round"/>
+                <path class="branch" d="M201 367 C172 348 143 332 112 328" fill="none" stroke="url(#trunkGrad)" stroke-width="13" stroke-linecap="round"/>
+
+                <g class="canopy foliage">
+                  <circle cx="123" cy="216" r="74" fill="#69a875"/>
+                  <circle cx="177" cy="168" r="89" fill="#78b47d"/>
+                  <circle cx="248" cy="157" r="96" fill="#70ad78"/>
+                  <circle cx="311" cy="213" r="78" fill="#63a06f"/>
+                  <circle cx="118" cy="294" r="75" fill="#6ca974"/>
+                  <circle cx="185" cy="266" r="95" fill="#7bb781"/>
+                  <circle cx="274" cy="273" r="102" fill="#71ae79"/>
+                  <circle cx="330" cy="299" r="68" fill="#639d6d"/>
+                </g>
+
+                <g class="canopy blossoms" id="blossoms">
+                  <circle cx="117" cy="213" r="69" fill="url(#blossomGrad)"/>
+                  <circle cx="176" cy="163" r="84" fill="url(#blossomGrad)"/>
+                  <circle cx="247" cy="154" r="91" fill="url(#blossomGrad)"/>
+                  <circle cx="309" cy="210" r="74" fill="url(#blossomGrad)"/>
+                  <circle cx="121" cy="290" r="70" fill="url(#blossomGrad)"/>
+                  <circle cx="184" cy="263" r="90" fill="url(#blossomGrad)"/>
+                  <circle cx="271" cy="270" r="97" fill="url(#blossomGrad)"/>
+                  <circle cx="327" cy="295" r="65" fill="url(#blossomGrad)"/>
+                  <g class="blossom-dots" fill="#fff4f8">
+                    <circle cx="92" cy="180" r="8"/><circle cx="143" cy="149" r="7"/><circle cx="187" cy="108" r="9"/>
+                    <circle cx="239" cy="110" r="7"/><circle cx="296" cy="149" r="8"/><circle cx="338" cy="212" r="8"/>
+                    <circle cx="104" cy="275" r="7"/><circle cx="151" cy="298" r="8"/><circle cx="224" cy="309" r="9"/>
+                    <circle cx="284" cy="319" r="8"/><circle cx="335" cy="280" r="7"/><circle cx="266" cy="207" r="7"/>
+                    <circle cx="195" cy="220" r="8"/><circle cx="152" cy="218" r="7"/>
+                  </g>
+                </g>
+              </g>
+            </svg>
+
+            <button class="secret-note" id="secretNote" type="button" aria-label="Open secret note">
+              <span>for carine</span>
+              <i>♡</i>
+            </button>
+          </div>
+
+          <div class="watering-can" id="wateringCan" aria-hidden="true">
+            <div class="can-body"></div>
+            <div class="can-handle"></div>
+            <div class="can-spout"></div>
+            <div class="water-stream" id="waterStream">
+              <i></i><i></i><i></i><i></i><i></i>
+            </div>
+          </div>
+        </div>
+
+        <div class="garden-controls">
+          <button class="water-button" id="waterButton" type="button">
+            <span class="drop">💧</span>
+            <span>
+              <b>Water the little plant</b>
+              <small id="waterHint">Tap to help it grow</small>
+            </span>
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <div class="love-overlay" id="loveOverlay" aria-hidden="true">
+      <div class="heart-shadow"></div>
+      <div class="heart-main">♥</div>
+      <div class="heart-glow">♥</div>
+      <div class="heart-particles" id="heartParticles"></div>
+    </div>
+
+    <section class="story-overlay" id="storyOverlay" aria-hidden="true">
+      <div class="story-shell">
+        <button class="story-close" id="storyClose" type="button" aria-label="Skip story">×</button>
+
+        <div class="story-scroll" id="storyScroll">
+          <div class="story-sequence" id="storySequence">
+            <div class="story-sticky">
+              <div class="story-backdrop"></div>
+              <div class="story-blush story-blush-a" aria-hidden="true"></div>
+              <div class="story-blush story-blush-b" aria-hidden="true"></div>
+              <div class="story-tree story-tree-left" aria-hidden="true">
+                <svg class="story-tree-svg" viewBox="0 0 420 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="storyTrunkGradL" x1="120" y1="520" x2="240" y2="120" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#6A4948"/>
+                      <stop offset="0.55" stop-color="#8B625E"/>
+                      <stop offset="1" stop-color="#5B3D3E"/>
+                    </linearGradient>
+                    <radialGradient id="storyBlossomGradL" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(0.35 0.35) scale(1)">
+                      <stop stop-color="#FFF8FC"/>
+                      <stop offset="0.35" stop-color="#FFE4EE"/>
+                      <stop offset="0.72" stop-color="#F7B8CF"/>
+                      <stop offset="1" stop-color="#ED8FB7"/>
+                    </radialGradient>
+                    <filter id="treeShadowL" x="0" y="0" width="420" height="560" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feDropShadow dx="0" dy="14" stdDeviation="10" flood-color="#A06883" flood-opacity="0.18"/>
+                    </filter>
+                  </defs>
+                  <g filter="url(#treeShadowL)">
+                    <path d="M120 536 C118 464 129 398 156 340 C169 311 188 276 216 247 C209 287 209 323 223 366 C238 330 262 300 304 270 C288 314 273 351 258 392 C282 366 310 349 349 344 C322 372 295 401 270 438 C256 458 250 498 250 536 Z" fill="url(#storyTrunkGradL)"/>
+                    <path d="M196 256 C164 221 146 183 142 132" stroke="#6C4B4D" stroke-width="18" stroke-linecap="round"/>
+                    <path d="M210 309 C174 283 143 260 104 252" stroke="#755052" stroke-width="15" stroke-linecap="round"/>
+                    <path d="M229 282 C273 247 320 217 366 200" stroke="#755052" stroke-width="15" stroke-linecap="round"/>
+                    <path d="M254 392 C286 369 316 356 356 350" stroke="#755052" stroke-width="13" stroke-linecap="round"/>
+                    <path d="M221 353 C188 323 160 304 121 293" stroke="#755052" stroke-width="12" stroke-linecap="round"/>
+                    <path d="M174 207 C151 186 129 165 104 136" stroke="#755052" stroke-width="12" stroke-linecap="round"/>
+                  </g>
+                  <g opacity="0.98">
+                    <ellipse cx="125" cy="150" rx="72" ry="58" fill="url(#storyBlossomGradL)"/>
+                    <ellipse cx="190" cy="120" rx="84" ry="66" fill="url(#storyBlossomGradL)"/>
+                    <ellipse cx="266" cy="130" rx="92" ry="72" fill="url(#storyBlossomGradL)"/>
+                    <ellipse cx="334" cy="187" rx="76" ry="62" fill="url(#storyBlossomGradL)"/>
+                    <ellipse cx="108" cy="246" rx="78" ry="64" fill="url(#storyBlossomGradL)"/>
+                    <ellipse cx="184" cy="230" rx="95" ry="77" fill="url(#storyBlossomGradL)"/>
+                    <ellipse cx="268" cy="240" rx="102" ry="82" fill="url(#storyBlossomGradL)"/>
+                    <ellipse cx="340" cy="298" rx="72" ry="58" fill="url(#storyBlossomGradL)"/>
+                    <ellipse cx="170" cy="310" rx="74" ry="60" fill="url(#storyBlossomGradL)" opacity="0.92"/>
+                    <ellipse cx="250" cy="320" rx="82" ry="64" fill="url(#storyBlossomGradL)" opacity="0.92"/>
+                  </g>
+                  <g fill="#FFF7FB" opacity="0.9">
+                    <circle cx="92" cy="122" r="7"/><circle cx="141" cy="104" r="6"/><circle cx="176" cy="84" r="7"/><circle cx="223" cy="87" r="6"/><circle cx="275" cy="96" r="7"/><circle cx="320" cy="124" r="6"/><circle cx="350" cy="164" r="7"/><circle cx="118" cy="206" r="6"/><circle cx="156" cy="235" r="7"/><circle cx="209" cy="208" r="6"/><circle cx="246" cy="180" r="7"/><circle cx="292" cy="213" r="6"/><circle cx="329" cy="256" r="7"/><circle cx="149" cy="296" r="6"/><circle cx="201" cy="284" r="7"/><circle cx="260" cy="284" r="6"/><circle cx="300" cy="321" r="7"/>
+                  </g>
+                </svg>
+              </div>
+              <div class="story-tree story-tree-right" aria-hidden="true">
+                <svg class="story-tree-svg" viewBox="0 0 420 560" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <defs>
+                    <linearGradient id="storyTrunkGradR" x1="120" y1="520" x2="240" y2="120" gradientUnits="userSpaceOnUse">
+                      <stop stop-color="#6A4948"/>
+                      <stop offset="0.55" stop-color="#8B625E"/>
+                      <stop offset="1" stop-color="#5B3D3E"/>
+                    </linearGradient>
+                    <radialGradient id="storyBlossomGradR" cx="0" cy="0" r="1" gradientUnits="userSpaceOnUse" gradientTransform="translate(0.35 0.35) scale(1)">
+                      <stop stop-color="#FFF8FC"/>
+                      <stop offset="0.35" stop-color="#FFE4EE"/>
+                      <stop offset="0.72" stop-color="#F7B8CF"/>
+                      <stop offset="1" stop-color="#ED8FB7"/>
+                    </radialGradient>
+                    <filter id="treeShadowR" x="0" y="0" width="420" height="560" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                      <feDropShadow dx="0" dy="14" stdDeviation="10" flood-color="#A06883" flood-opacity="0.18"/>
+                    </filter>
+                  </defs>
+                  <g filter="url(#treeShadowR)">
+                    <path d="M120 536 C118 464 129 398 156 340 C169 311 188 276 216 247 C209 287 209 323 223 366 C238 330 262 300 304 270 C288 314 273 351 258 392 C282 366 310 349 349 344 C322 372 295 401 270 438 C256 458 250 498 250 536 Z" fill="url(#storyTrunkGradR)"/>
+                    <path d="M196 256 C164 221 146 183 142 132" stroke="#6C4B4D" stroke-width="18" stroke-linecap="round"/>
+                    <path d="M210 309 C174 283 143 260 104 252" stroke="#755052" stroke-width="15" stroke-linecap="round"/>
+                    <path d="M229 282 C273 247 320 217 366 200" stroke="#755052" stroke-width="15" stroke-linecap="round"/>
+                    <path d="M254 392 C286 369 316 356 356 350" stroke="#755052" stroke-width="13" stroke-linecap="round"/>
+                    <path d="M221 353 C188 323 160 304 121 293" stroke="#755052" stroke-width="12" stroke-linecap="round"/>
+                    <path d="M174 207 C151 186 129 165 104 136" stroke="#755052" stroke-width="12" stroke-linecap="round"/>
+                  </g>
+                  <g opacity="0.98">
+                    <ellipse cx="125" cy="150" rx="72" ry="58" fill="url(#storyBlossomGradR)"/>
+                    <ellipse cx="190" cy="120" rx="84" ry="66" fill="url(#storyBlossomGradR)"/>
+                    <ellipse cx="266" cy="130" rx="92" ry="72" fill="url(#storyBlossomGradR)"/>
+                    <ellipse cx="334" cy="187" rx="76" ry="62" fill="url(#storyBlossomGradR)"/>
+                    <ellipse cx="108" cy="246" rx="78" ry="64" fill="url(#storyBlossomGradR)"/>
+                    <ellipse cx="184" cy="230" rx="95" ry="77" fill="url(#storyBlossomGradR)"/>
+                    <ellipse cx="268" cy="240" rx="102" ry="82" fill="url(#storyBlossomGradR)"/>
+                    <ellipse cx="340" cy="298" rx="72" ry="58" fill="url(#storyBlossomGradR)"/>
+                    <ellipse cx="170" cy="310" rx="74" ry="60" fill="url(#storyBlossomGradR)" opacity="0.92"/>
+                    <ellipse cx="250" cy="320" rx="82" ry="64" fill="url(#storyBlossomGradR)" opacity="0.92"/>
+                  </g>
+                  <g fill="#FFF7FB" opacity="0.9">
+                    <circle cx="92" cy="122" r="7"/><circle cx="141" cy="104" r="6"/><circle cx="176" cy="84" r="7"/><circle cx="223" cy="87" r="6"/><circle cx="275" cy="96" r="7"/><circle cx="320" cy="124" r="6"/><circle cx="350" cy="164" r="7"/><circle cx="118" cy="206" r="6"/><circle cx="156" cy="235" r="7"/><circle cx="209" cy="208" r="6"/><circle cx="246" cy="180" r="7"/><circle cx="292" cy="213" r="6"/><circle cx="329" cy="256" r="7"/><circle cx="149" cy="296" r="6"/><circle cx="201" cy="284" r="7"/><circle cx="260" cy="284" r="6"/><circle cx="300" cy="321" r="7"/>
+                  </g>
+                </svg>
+              </div>
+              <div class="story-petal-field" aria-hidden="true">
+                <span class="story-falling-petal p1"></span><span class="story-falling-petal p2"></span><span class="story-falling-petal p3"></span><span class="story-falling-petal p4"></span><span class="story-falling-petal p5"></span><span class="story-falling-petal p6"></span><span class="story-falling-petal p7"></span><span class="story-falling-petal p8"></span><span class="story-falling-petal p9"></span><span class="story-falling-petal p10"></span><span class="story-falling-petal p11"></span><span class="story-falling-petal p12"></span>
+              </div>
+              <div class="story-grain" aria-hidden="true"></div>
+              <div class="story-vignette" aria-hidden="true"></div>
+
+              <header class="story-header">
+                <span>I love you in every universe</span>
+                <span>FOR CARINE ♡</span>
+              </header>
+
+              <div class="story-frame-stage" id="storyFrameStage" aria-live="polite"></div>
+
+              <div class="story-lyric-wrap" id="storyLyricWrap">
+                <p class="story-kicker" id="storyKicker">scroll slowly</p>
+                <p class="story-lyric story-lyric-script" id="storyLyric">Merry Christmas, I Miss You</p>
+                <p class="story-sub" id="storySub">30 seconds of little memories.</p>
+              </div>
+
+              <div class="story-progress"><i id="storyProgressBar"></i></div>
+              <div class="story-time" id="storyTime">00:00 / 00:30</div>
+              <div class="story-hint">scroll pelan pelan ya sayangg ↓</div>
+            </div>
+
+            <div class="story-track" id="storyTrack"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="memory-overlay" id="memoryOverlay" aria-hidden="true">
+      <div class="memory-backdrop"></div>
+      <div class="memory-sheet">
+        <div class="sheet-handle"></div>
+        <header class="memory-header">
+          <div>
+            <small>OUR LITTLE MEMORIES</small>
+            <h2>For Carine ♡</h2>
+          </div>
+          <button class="close-memory" id="closeMemory" type="button" aria-label="Close">×</button>
+        </header>
+
+        <p class="memory-message">
+          Beberapa potongan kecil dari cerita kita. Semoga selalu ada lebih banyak
+          momen yang bisa tumbuh setelah ini.
+        </p>
+
+        <div class="memory-stage" id="memoryStage"></div>
+
+        <div class="memory-hint">
+          <span>Tap foto atau video untuk melihat lebih dekat</span>
+          <i>♡</i>
+        </div>
+      </div>
+    </section>
+
+    <div class="viewer" id="viewer" aria-hidden="true">
+      <button class="viewer-close" id="viewerClose" type="button">×</button>
+      <div class="viewer-content" id="viewerContent"></div>
+    </div>
+
+    <audio id="ambientAudio" preload="metadata">
+      <!-- Opsional: taruh musik sendiri di assets/media/music/music.mp3 -->
+      <source src="assets/media/music/music.mp3" type="audio/mpeg">
+    </audio>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
